@@ -32,9 +32,41 @@ npm install @binarynoir/vitepress-reading-time-tag
 
 ## Usage
 
+Register the plugin in VitePress's own `markdown.config` hook, the same place
+you'd add any other markdown-it plugin:
+
 ```ts
 // .vitepress/config.mts
 import { defineConfig } from 'vitepress';
+import { readingTimeTag } from '@binarynoir/vitepress-reading-time-tag';
+
+export default defineConfig({
+  markdown: {
+    config(md) {
+      md.use(readingTimeTag);
+    },
+  },
+});
+```
+
+Then put `[[readingTime]]` on its own line in any page. Case doesn't matter,
+and spaces inside the brackets are fine (`[[ readingTime ]]`).
+
+Options go as the second argument (`md.use(readingTimeTag, { /* ... */ })`), and
+other markdown-it plugins can share the same `config(md)` function:
+
+```ts
+config(md) {
+  md.use(readingTimeTag);
+  md.use(somethingElse);
+},
+```
+
+### `withReadingTimeTag` shortcut
+
+If you'd rather wrap your config than touch `markdown.config`:
+
+```ts
 import { withReadingTimeTag } from '@binarynoir/vitepress-reading-time-tag/vitepress';
 
 export default withReadingTimeTag(
@@ -44,12 +76,9 @@ export default withReadingTimeTag(
 );
 ```
 
-Then put `[[readingTime]]` on its own line in any page. Case doesn't matter,
-and spaces inside the brackets are fine (`[[ readingTime ]]`).
-
-`withReadingTimeTag` will not clobber a `markdown.config` you already have,
-including one set by another `withX()` wrapper. It installs its own first, then
-calls yours with the same arguments.
+It is equivalent to the `markdown.config` version above. It will not clobber a
+`markdown.config` you already have, including one set by another `withX()`
+wrapper. It installs its own first, then calls yours with the same arguments.
 
 ### Plain markdown-it
 

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-10-05
+
+### Changed
+
+- README: configure `readingTimeTag` through VitePress's own `markdown.config` hook, with `withReadingTimeTag` documented as the shortcut.
+
 ## [0.1.1] - 2026-10-05
 
 ### Changed
