@@ -1,6 +1,6 @@
 {
   "name": "@binarynoir/vitepress-reading-time-tag",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Write [[readingTime]] in VitePress 2 Markdown and get a \"Reading time\" tip block with the page's estimated reading time, calculated at build time.",
   "keywords": [
     "vitepress",
