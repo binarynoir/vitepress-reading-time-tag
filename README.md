@@ -173,3 +173,17 @@ the checks, publishes to npm, and creates a GitHub release.
 ## License
 
 MIT
+
+---
+
+## Support
+
+If you encounter any issues or have questions, please open an issue on [GitHub](https://github.com/binarynoir/vitepress-reading-time-tag/issues).
+
+## Author
+
+John Smith III
+
+## Acknowledgments
+
+Thanks to all contributors and users for their support and feedback.
