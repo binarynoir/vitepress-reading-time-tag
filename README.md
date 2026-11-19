@@ -205,7 +205,7 @@ Reading Time Tag is one of a family of open-source tools from BinaryNoir.
 - [Markdown Tags](https://binarynoir.tech/plugins/markdown-tags/): inline status badges and tagged-pages lists
 - [Text Style](https://binarynoir.tech/plugins/text-style): colored and sized text inline
 
-**New:** [Blog](https://binarynoir.tech/plugins/blog/): posts anywhere, a main blog and section blogs, with RSS feeds
+**New:** [Blog for Vite](https://binarynoir.tech/plugins/vite-blog): a Markdown blog for a plain Vite site, with search, feeds and a strict CSP
 
 **See them all:** VitePress plugins, Vite plugins, editor extensions and command-line tools, with documentation and live demos, at **[binarynoir.tech](https://binarynoir.tech)**.
 
